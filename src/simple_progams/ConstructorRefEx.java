@@ -36,10 +36,10 @@ class Dog{
 public class ConstructorRefEx {
 public static void main (String a[]) {
 	List<String>names=Arrays.asList("meenu","rooney","rover");
-	List<Dog>dogs=
-	             names.stream()
-			.map(Dog::new)//Constructor Reference ;it is a kind of method reference
-			.toList();
+	List<Dog>dogs=new ArrayList<>();
+	             dogs=names.stream()
+			         .map(Dog::new)//Constructor Reference ;it is a kind of method reference
+			           .toList();
 	System.out.println(dogs);
 	
 	  
